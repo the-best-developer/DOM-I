@@ -50,6 +50,24 @@ navItems[3].textContent = siteContent["nav"]["nav-item-4"];
 navItems[4].textContent = siteContent["nav"]["nav-item-5"];
 navItems[5].textContent = siteContent["nav"]["nav-item-6"];
 
+//Add nav item
+let preItem = document.createElement("a")
+preItem.setAttribute("href", "#");
+preItem.textContent = "Home";
+
+let appItem = document.createElement("a");
+appItem.setAttribute("href", "#");
+appItem.textContent = "Partners";
+
+const navSelect1 = document.querySelector('nav');
+const navSelect2 = document.querySelector('nav');
+navSelect1.appendChild(appItem);
+navSelect2.prepend(preItem);
+
+//Nav color green
+const navGreen = document.querySelectorAll('nav a');
+navGreen.forEach(item => item.style.color = 'green');
+
 //cta
 let ctaH1 = document.querySelector(".cta-text h1");
 ctaH1.textContent = siteContent["cta"]["h1"];
@@ -79,7 +97,7 @@ MainBottomTextH4[0].textContent = siteContent["main-content"]["services-h4"];
 MainBottomTextH4[1].textContent = siteContent["main-content"]["product-h4"];
 MainBottomTextH4[2].textContent = siteContent["main-content"]["vision-h4"];
 
-let MainBottomTextP = document.querySelectorAll(".main-content .bottom-content .text-content p");
+let MainBottomTextP = document.querySelectorAll(".main-content .bottom-content .text-content p");z
 MainBottomTextP[0].textContent = siteContent["main-content"]["services-content"];
 MainBottomTextP[1].textContent = siteContent["main-content"]["product-content"];
 MainBottomTextP[2].textContent = siteContent["main-content"]["vision-content"];
